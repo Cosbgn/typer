@@ -1,5 +1,4 @@
 import Vue from 'vue'
-import App from './App.vue'
 import VueCodemirror from 'vue-codemirror'
 import Home from './Home.vue'
 import Editor from './Editor.vue'

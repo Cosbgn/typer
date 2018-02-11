@@ -1,12 +1,29 @@
 <template>
   <div>
       <section class='section'>
-          <h1 class='title'>Typer</h1>
+          <!-- <h1 class='title'>Typer</h1>
           <h2 class='subtitle'>The easiest and fastest way to record your tutorial videos <a class='is-pulled-right tag is-info'>Show Options</a></h2>
-          <hr />
+          <hr /> -->
+
+          <nav class="level">
+            <!-- Left side -->
+            <div class="level-left">
+              <div class="level-item">
+                  <h1 class='title'>Typer</h1>
+              </div>
+            </div>
+
+            <div class="level-right">
+              <p class="level-item"><a class='button is-danger' @click='openLogin()'>Login</a></p>
+              <p class="level-item"><a class='button is-link'>Show Options</a></p>
+            </div>
+          </nav>
+
+
+
+
           <codemirror v-model="code" :options="cmOption" class='code-editor'></codemirror>
-          <a class='button is-fullwidth is-info no-radious' @click='typeIt()'>Type it!</a>
-          <div data-netlify-identity-menu></div>
+          <a class='button is-fullwidth is-link no-radious' @click='typeIt()'>Type it!</a>
       </section>
 
   </div>
@@ -97,7 +114,11 @@ export default {
         clearInterval(interval);
         }
         }, speed);
-        }
+    },
+
+        openLogin(){
+            netlifyIdentity.open();
+        },
     },
 
 }
@@ -107,4 +128,5 @@ export default {
 .no-radious{
     border-radius: 0px;
 }
+
 </style>

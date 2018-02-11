@@ -6,6 +6,7 @@
           <hr />
           <codemirror v-model="code" :options="cmOption" class='code-editor'></codemirror>
           <a class='button is-fullwidth is-info no-radious' @click='typeIt()'>Type it!</a>
+          <div data-netlify-identity-menu></div>
       </section>
 
   </div>
